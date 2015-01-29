@@ -1,0 +1,25 @@
+{
+  "name": "install-timestamp",
+  "version": "0.1.0",
+  "bin": {
+    "install-timestamp": "./bin/postinstall.js"
+  },
+  "description": "Post-install script that generates unique installation timestamp easily accessible by application",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/micnews/install-timestamp.git"
+  },
+  "author": "Mic Network, Inc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/micnews/install-timestamp/issues"
+  },
+  "homepage": "https://github.com/micnews/install-timestamp",
+  "devDependencies": {
+    "tape": "^3.4.0"
+  }
+}
