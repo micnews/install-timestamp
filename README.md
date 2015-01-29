@@ -3,13 +3,13 @@ Post-install script that generates unique installation timestamp easily accessib
 
 ## USAGE
 
-1. Install this package:
+1 . Install this package:
 
 ```bash
 npm install install-timestamp --save
 ```
 
-2. Add postinstall script to your `package.json`:
+2 . Add postinstall script to your `package.json`:
 
 ```json
 "scripts": {
@@ -17,7 +17,7 @@ npm install install-timestamp --save
 },
 ```
 
-3. Read timestamp:
+3 . Read timestamp:
 
 ```js
 var installTimestamp = require('install-timestamp');
