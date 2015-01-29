@@ -1,6 +1,8 @@
 ## SYNOPSIS
 Post-install script that generates unique installation timestamp easily accessible by application. Timestamp includes current date from `Date.now()` and some random bits.
 
+[![Build Status](https://travis-ci.org/micnews/install-timestamp.svg)](https://travis-ci.org/micnews/install-timestamp)
+
 ## USAGE
 
 1 . Install this package:
