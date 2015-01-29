@@ -2,16 +2,24 @@ var fs = require('fs');
 var path = require('path');
 var filename = path.resolve(__dirname, 'install-timestamp');
 
+function randomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function getTimestamp() {
+  return String(Date.now()) + String(randomInt(100, 999));
+}
+
 module.exports = function() {
   try {
-    return parseInt(fs.readFileSync(filename, 'utf8'), 10);
+    return fs.readFileSync(filename, 'utf8');
   } catch (e) {
-    return Date.now();
+    return getTimestamp();
   }
 };
 
 module.exports.put = function() {
-  fs.writeFileSync(filename, String(Date.now()));
+  fs.writeFileSync(filename, getTimestamp());
 };
 
 module.exports.del = function() {

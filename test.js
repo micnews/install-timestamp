@@ -7,7 +7,7 @@ test('should return current timestamp if file does not exist', function(t) {
   var now = Date.now;
   Date.now = function() { return 1111; };
   var ts = installTimestamp();
-  t.equal(ts, 1111);
+  t.equal(ts.slice(0, -3), '1111');
   Date.now = now;
   t.end();
 });
@@ -19,6 +19,6 @@ test('should return written timestamp if file exists', function(t) {
   installTimestamp.put();
   Date.now = now;
   var ts = installTimestamp();
-  t.equal(ts, 9999);
+  t.equal(ts.slice(0, -3), '9999');
   t.end();
 });
